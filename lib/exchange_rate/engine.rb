@@ -1,6 +1,3 @@
-require 'money'
-require 'eu_central_bank'
-
 module ExchangeRate
   class Engine < Rails::Engine
     isolate_namespace ExchangeRate
