@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    exchange_rate (0.0.4)
+    exchange_rate (0.0.5)
       eu_central_bank
       money
       rails (~> 4.0)
