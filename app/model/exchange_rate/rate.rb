@@ -1,7 +1,5 @@
 module ExchangeRate
   class Rate < ActiveRecord::Base
-    attr_accessible :rate_date, :eur, :usd
-
     def nok_to_eur(nok_value)
       nok_value / eur
     end
