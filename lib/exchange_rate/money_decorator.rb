@@ -1,6 +1,6 @@
 Money.class_eval do
   def exchange_to_with_date(other_currency, date)
-    other_currency = Currency.wrap(other_currency)
+    other_currency = Money::Currency.wrap(other_currency)
     if self.currency == other_currency
       self
     else
