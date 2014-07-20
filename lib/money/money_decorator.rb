@@ -4,7 +4,7 @@ Money.class_eval do
     if self.currency == other_currency
       self
     else
-      rate = ExchangeRate.rate_close_to(date).first
+      rate = ExchangeRate::Rate.rate_close_to(date).first
       @bank.add_rate("EUR", "NOK", rate.eur)
       @bank.add_rate("USD", "NOK", rate.usd)
       @bank.exchange_with(self, other_currency)
