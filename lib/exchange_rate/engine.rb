@@ -3,7 +3,7 @@ module ExchangeRate
     isolate_namespace ExchangeRate
 
     config.to_prepare do
-      Dir.glob(Rails.root + "app/decorators/**/*_decorator*.rb").each do |c|
+      Dir.glob(ExchangeRate::Rails::Engine.root.join('app', 'decorators', '**', '*_decorator*.rb')).each do |c|
         puts c
         require_dependency(c)
       end
